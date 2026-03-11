@@ -18,7 +18,7 @@
 
 This is the official template for a students report or project or lab report for the [HEI-Vs Engineering School](https://synd.hevs.io) in Sion, Switzerland. More templates can the found in our [GitHub organization](https://github.com/hei-templates)
 
-![sample](https://github.com/hei-templates/hei-synd-report/blob/main/sample.png)
+![sample](https://github.com/hei-templates/hei-synd-report/blob/22ad627965bc449ffefdfcc21b0b8eabfb3eadeb/sample.png)
 
 ## Using the template
 
