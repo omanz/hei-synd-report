@@ -5,11 +5,8 @@
 // Document options
 //
 #let option = (
-  type : "final",
-  //type : "draft",
-  lang : "en",
-  //lang : "de",
-  //lang : "fr",
+  type : sys.inputs.at("type", default:"draft"),    // [draft|final]
+  lang : sys.inputs.at("lang", default:"en"),       // [en|fr|de]
 )
 //-------------------------------------
 // Optional generate titlepage image
