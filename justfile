@@ -228,18 +228,18 @@ open file_name=doc_name:
   del /q /s template\main\*.pdf 2>nul
   del /q /s template\tail\*.pdf 2>nul
 
-# update hei-synd-thesis import version in all .typ files
+# update hei-synd-report import version in all .typ files
 [linux]
 set-version version:
   #!/usr/bin/env sh
-  echo "Updating hei-synd-thesis version to {{version}}"
-  find {{project_dir}} -name "*.typ" -exec sed -i 's/@preview\/hei-synd-thesis:[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/@preview\/hei-synd-thesis:{{version}}/g' {} \;
+  echo "Updating hei-synd-report version to {{version}}"
+  find {{project_dir}} -name "*.typ" -exec sed -i 's/@preview\/hei-synd-report:[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/@preview\/hei-synd-report:{{version}}/g' {} \;
   echo "Done"
 
-# update hei-synd-thesis import version in all .typ files
+# update hei-synd-report import version in all .typ files
 [macos]
 set-version version:
   #!/usr/bin/env sh
-  echo "Updating hei-synd-thesis version to {{version}}"
-  find {{project_dir}} -name "*.typ" -exec sed -i '' 's/@preview\/hei-synd-thesis:[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/@preview\/hei-synd-thesis:{{version}}/g' {} \;
+  echo "Updating hei-synd-report version to {{version}}"
+  find {{project_dir}} -name "*.typ" -exec sed -i '' 's/@preview\/hei-synd-report:[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/@preview\/hei-synd-report:{{version}}/g' {} \;
   echo "Done"
