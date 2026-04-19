@@ -43,6 +43,8 @@
     ),
     keywords : ("Typst", "Template", "Report"),
     version  : "v0.1.0",
+    github   : none,
+    location : none,
   ),
   date: datetime.today(),
   display : (
@@ -133,6 +135,8 @@
   doc.course.semester   =  doc.course.at("semester", default: none)
   doc.keywords          =  doc.at("keywords", default: ("Typst", "Template", "Report"))
   doc.version           =  doc.at("version", default: none)
+  doc.github            =  doc.at("github", default: none)
+  doc.location          =  doc.at("location", default: none)
 
   // basic properties
   set document(author: doc.authors.map(a => if a.name != none {a.name} else {""}), title: doc.title, keywords: doc.keywords, date: date)

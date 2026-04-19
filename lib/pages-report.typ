@@ -72,6 +72,15 @@
     align(center, text(size:larger, [_ #doc.subtitle _] ))
     v(2em)
   }
+  if doc.authors.first().name != none {
+    align(center, text(size:larger, {[*#enumerating-emails(names:doc.authors.map(a => a.name), emails:doc.authors.map(a => a.email))*\ ]}))
+    v(2em)
+  }
+  if doc.github != none {
+    align(center, text(size:larger, {[#safe-link(url:doc.github, name:"Repo github")]} ))
+    v(2em)
+  }
+
 
   if doc.logos.tp_main != none {
     align(center, [#doc.logos.tp_main])
@@ -104,8 +113,7 @@
   }
 
   set text(large)
-  if doc.authors.first().name != none {[*#enumerating-emails(names:doc.authors.map(a => a.name), emails:doc.authors.map(a => a.email))*\ ]}
-
+  if doc.location != none {[#doc.location $circle.filled.tiny$ ]}
   if date != none {[#date.display("[day].[month].[year]") $circle.filled.tiny$ ]}
   if doc.version != none {[#doc.version]}
   if (doc.version != none and type != none) {" " + $circle.filled.tiny$ + " "}
