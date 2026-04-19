@@ -51,7 +51,7 @@
   table(
     columns: (50%, 50%),
     stroke:none,
-    align:(left, right),
+    align:(left + horizon, right + horizon),
     [
       #if doc.logos.tp_topleft != none {
         [#doc.logos.tp_topleft]
