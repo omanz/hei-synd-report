@@ -77,7 +77,11 @@
     v(2em)
   }
   if doc.github != none {
-    align(center, text(size:larger, {[#safe-link(url:doc.github, name:"Repo github")]} ))
+    align(center, {
+      text(size: larger)[Repo github :]
+      linebreak()
+      text(size: larger)[#link(doc.github, doc.github)]
+    })
     v(2em)
   }
 
